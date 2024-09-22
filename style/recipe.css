@@ -1,0 +1,147 @@
+body {
+    grid-template-areas: 'header header header header header header'
+        'main main main main main main'
+        'footer footer footer footer footer footer';
+}
+
+header {
+    grid-area: header;
+    padding: 0 35px;
+    max-width: 100dvw;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    padding: 100px 35px;
+}
+
+.recipe-name {
+    margin: 0;
+}
+
+.recipe-details>.recipe-main-details {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.recipe-image {
+    width: 100%;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+
+/*FANCY CHECKBOX*/
+/* Esconde o radio padrão */
+.custom-checkbox {
+    display: none;
+}
+
+/* Estiliza o label para simular o radio button */
+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Cria o círculo do radio button */
+label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #f79f1a;
+    box-sizing: border-box;
+}
+
+/* Cria o efeito de preenchimento quando o radio estiver selecionado */
+.custom-checkbox:checked+label:before {
+    background-color: #fff;
+    /* Cor quando selecionado */
+    border-color: #f79f1a;
+}
+
+/* Adiciona o círculo menor dentro do círculo quando selecionado */
+label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f79f1a;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.custom-checkbox:checked+label:after {
+    opacity: 1;
+    background-color: #f79f1a;
+}
+
+/**/
+
+.instruction-no {
+    background-color: #f79f1a;
+    padding: 6px 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+/*TABLET*/
+
+@media(min-width: 768px) {
+    #brand {
+        display: inline;
+    }
+
+    .ingredients-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 50%;
+    }
+
+    .ingredient-item {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .recipe-details>.recipe-main-details {
+        width: 50%;
+    }
+}
+
+/*DESKTOP*/
+@media(min-width: 1024px) {
+    header {
+        padding: 0 150px;
+    }
+
+    main {
+        padding: 50px 300px;
+    }
+
+    .recipe-details>.recipe-main-details {
+        width: 50%;
+    }
+}
