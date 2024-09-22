@@ -38,7 +38,7 @@ The designs were created to the following widths:
 ## Icons
 
 We provide the required icons but, if you prefer, you can use a font icon library. Some suggestions can be found below:
-
+Deploy: https://recipe-application-rose.vercel.app/
 - [Font Awesome](https://fontawesome.com)
 - [Iconify](https://iconify.design/)
 
