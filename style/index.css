@@ -8,7 +8,7 @@ body {
 header {
     grid-area: header;
     padding: 0 35px;
-    width: 100%;
+    max-width: 100%;
 }
 
 /*HERO*/
